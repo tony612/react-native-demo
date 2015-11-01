@@ -13,12 +13,14 @@ var {
 } = React;
 
 import Issues from './components/Issues';
+import SearchBox from './components/SearchBox';
 
 var AwesomeProject = React.createClass({
   render: function() {
     return (
       <View style={styles.container}>
         <Issues />
+        <SearchBox />
       </View>
     );
   }
