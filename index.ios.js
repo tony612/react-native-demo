@@ -12,13 +12,13 @@ var {
   View,
 } = React;
 
-import Hello from './components/Hello';
+import Issues from './components/Issues';
 
 var AwesomeProject = React.createClass({
   render: function() {
     return (
       <View style={styles.container}>
-        <Hello />
+        <Issues />
       </View>
     );
   }
