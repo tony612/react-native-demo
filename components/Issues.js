@@ -17,7 +17,7 @@ export default React.createClass({
     const issues = IssueStore.getIssues();
 
     let titles = _.mapValues(issues, (issue) =>
-      <Text>
+      <Text style={styles.title}>
       {issue.title}
       </Text>
     );
@@ -31,8 +31,17 @@ export default React.createClass({
 });
 
 const styles = StyleSheet.create({
+  title: {
+    color: '#fff',
+    borderWidth: 1,
+    borderColor: '#fff',
+    padding: 10,
+    margin: 5
+  },
   container: {
     flex: 1,
     alignSelf: 'stretch',
+
+    backgroundColor: '#222358'
   },
 });
