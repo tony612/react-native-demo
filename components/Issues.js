@@ -12,6 +12,10 @@ import _ from 'lodash';
 import IssueStore from '../stores/IssueStore';
 
 export default React.createClass({
+  componentDidMount() {
+    IssueStore.addChangeListener(()=> this.forceUpdate());
+  },
+
   render: function() {
 
     const issues = IssueStore.getIssues();

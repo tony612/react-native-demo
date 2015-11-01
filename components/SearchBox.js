@@ -7,13 +7,20 @@ const {
   TextInput,
 } = React;
 
+import IssueStore from '../stores/IssueStore';
+
 export default React.createClass({
+  searchIssues: function(query) {
+    IssueStore.searchIssues(query);
+  },
+
   render: function() {
 
     return (
       <View style={styles.container}>
         <TextInput style={styles.searchInput}
           placeholder="Search..."
+          onChangeText={this.searchIssues}
         />
       </View>
     );
@@ -35,6 +42,6 @@ const styles = StyleSheet.create({
     top: 0,
     left: 0,
     right: 0,
-    backgroundColor: '#222358',
+    backgroundColor: '#442358',
   },
 });

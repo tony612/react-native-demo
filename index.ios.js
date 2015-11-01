@@ -34,16 +34,6 @@ var styles = StyleSheet.create({
     backgroundColor: '#F5FCFF',
     marginTop: 20,
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
 });
 
 AppRegistry.registerComponent('AwesomeProject', () => AwesomeProject);
