@@ -15,7 +15,6 @@ function emitChange() {
 
 module.exports = {
   getIssues() {
-    console.log(_filteredIssues.length)
     return _filteredIssues;
   },
 
@@ -71,7 +70,6 @@ function loadIssues(next = false) {
       return response.json();
     })
     .then((data) => {
-      console.log(data);
       data.forEach(rawIssue => {
         issues[`#${rawIssue.id}`] = rawIssue
       });
