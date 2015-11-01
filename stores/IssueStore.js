@@ -1,13 +1,13 @@
-let _issues = {};
-let _filteredIssues = {};
-let _isLoading = false;
-let _links = {};
-
 import EventEmitter from "react-native/Libraries/vendor/emitter/EventEmitter";
 
 import _ from 'lodash';
 
 const emitter = new EventEmitter;
+
+let _issues = {};
+let _filteredIssues = {};
+let _isLoading = false;
+let _links = {};
 
 function emitChange() {
   emitter.emit("change");
@@ -32,9 +32,9 @@ module.exports = {
       return;
     }
 
-    _filteredIssues = _.filter(_issues, function(val, key) {
-      return val.title.toLowerCase().indexOf(query) != -1
-    });
+    _filteredIssues = _.filter(_issues, (val, key) =>
+      val.title.toLowerCase().indexOf(query) != -1
+    );
     emitChange();
   },
 

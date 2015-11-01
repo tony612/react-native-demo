@@ -10,7 +10,7 @@ const {
 import _ from 'lodash';
 
 import IssueStore from '../stores/IssueStore';
-var Button = require('react-native-button');
+let Button = require('react-native-button');
 
 export default React.createClass({
   componentDidMount() {
