@@ -3,6 +3,7 @@ import React from "react-native";
 const {
   View,
   Text,
+  ScrollView,
   StyleSheet,
 } = React;
 
@@ -22,9 +23,9 @@ export default React.createClass({
     );
 
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         {titles}
-      </View>
+      </ScrollView>
     );
   }
 });
