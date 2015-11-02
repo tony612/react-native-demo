@@ -33,7 +33,7 @@ module.exports = {
     }
 
     _filteredIssues = _.filter(_issues, (val, key) =>
-      val.title.toLowerCase().indexOf(query) != -1
+      val.title.toLowerCase().indexOf(query.toLowerCase()) != -1
     );
     emitChange();
   },
